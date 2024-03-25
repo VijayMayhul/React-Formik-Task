@@ -68,11 +68,11 @@ const EditAuthorForm = () => {
 
   //declating validation Schema for form fields
   const validationSchema = Yup.object().shape({
-    author_name: Yup.string().required("Title is Required"),
+    author_name: Yup.string().required("Author Name is Required"),
     birth_date: Yup.date()
-      .required("Publication date is required")
-      .max(new Date(), "Publication date cannot be in the future"),
-    short_bio: Yup.string().required("Author is Required"),
+      .required("Birth date is required")
+      .max(new Date(), "Birth date cannot be in the future"),
+    short_bio: Yup.string().required("Short Bio is Required"),
     famous_works: Yup.string().required("One or above Famous Works/Works Required"),
     image_url: Yup.string().url("Invalid URL format"),
   });
